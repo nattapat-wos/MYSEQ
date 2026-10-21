@@ -17,14 +17,13 @@ def dna2rna(seq):
 def dna2protein(seq):
     DNA_Codons = loadCodons()
     protein = ""
-    for i in range(0,len(seq),3):
+    for i in range(0, len(seq), 3):
         dna = seq[i:i+3]
         protein += DNA_Codons.get(dna, "")
     return protein
 
 def loadCodons():
     DNA_Codons = {
-        # 'M' - START, '_' - STOP
         "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
         "TGT": "C", "TGC": "C",
         "GAT": "D", "GAC": "D",

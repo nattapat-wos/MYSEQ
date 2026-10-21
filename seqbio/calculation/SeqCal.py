@@ -9,7 +9,7 @@ def gcContent(seq):
 def atContent(seq):
     return (countBase(seq, 'A') + countBase(seq, 'T')) / (countBase(seq, 'A') + countBase(seq, 'T') + countBase(seq, 'G') + countBase(seq, 'C'))
 
-def countBaseDict(seq):
+def countBasesDict(seq):
     basesM = {}
     for base in seq:
         basesM[base] = basesM.setdefault(base, 0) + 1
